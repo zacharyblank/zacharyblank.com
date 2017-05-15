@@ -1,35 +1,19 @@
-.resume {
-	height: 100vh;
-	background: #fff;
-	width: 80vw;
-	position: absolute;
-	right: 0;
-	top: 0;
-	.translate3d(100%, 0, 0);
-	color: #333;
+body.menu-open {
 
-	.asymetric > .col-lg-3,
-	.asymetric > .col-lg-9 {
-		padding: 70px;
-	}
+	.flipped.nav-toggle {
 
-	.section-header {
-		text-align: right;
+		i {
+			&:nth-child(1) {
+				.rotate(-45deg);
+			}
 
-		h2 {
-		    font-size: 16px;
-		    font-weight: 500;
-		    letter-spacing: 2px;
-		    text-transform: uppercase;
-		    margin-top: 5px;		
+			&:nth-child(2) {
+				opacity: 0;
+			}
+
+			&:nth-child(3) {
+				.rotate(45deg);
+			}
 		}
 	}
-}
-
-.section-intro {
-	.transition(all .8s cubic-bezier(0.645, .045, .095, 1));	
-}
-
-body.show-resume .section-intro {
-	.translate3d(-80%, 0, 0);
 }

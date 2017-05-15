@@ -1,20 +1,25 @@
 .project-modal {
 
-	&:before {
-		content: " ";
-		display: block;
-		width: 100%;
-		height: 100%;
-		position: fixed;
-		background: rgba(0, 0, 0, 0);
-		z-index: 10;
-	    -webkit-transition: all .8s cubic-bezier(0.645, .045, .095, 1);
-	          transition: all .8s cubic-bezier(0.645, .045, .095, 1);
-	}
+	// &:before {
+	// 	content: " ";
+	// 	display: block;
+	// 	width: 100%;
+	// 	height: 100%;
+	// 	position: fixed;
+	// 	background: rgba(0, 0, 0, 0);
+	// 	z-index: 10;
+	//     -webkit-transition: all .8s cubic-bezier(0.645, .045, .095, 1);
+	//           transition: all .8s cubic-bezier(0.645, .045, .095, 1);
+	// }
 
 	&.in:before {
-		background: rgba(0, 0, 0, .5);
+		// background: rgba(0, 0, 0, .5);
 	}
+}
+
+body.home-project {
+
+
 }
 
 .project {
@@ -35,25 +40,27 @@
     padding-top: 100px;
     // margin-left: 25%;
 
-    &:before {
-    	content: " ";
-    	display: block;
-    	position: fixed;
-    	top: 0;
-    	left: 0;
-    	width: 100%;
-    	height: 100%;
-    }
+    // &:before {
+    // 	content: " ";
+    // 	display: block;
+    // 	position: fixed;
+    // 	top: 0;
+    // 	left: 0;
+    // 	width: 100%;
+    // 	height: 100%;
+    // }
 
 	&.in {
 		.translate3d(0, 0, 0);
 	}
 
 	.nav-toggle {
-		overflow: visible;
+		// overflow: visible;
+		// left: -55px;
+		// position: fixed;
 
 		i {
-			color: #3b3b3b;
+			color: #fff;
 			width: 30px;
 			right: 0;
 			left: 0;

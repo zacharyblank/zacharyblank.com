@@ -1,7 +1,12 @@
-module.exports = function($scope, $rootScope, $state) {
+module.exports = function($scope, $rootScope, $state, project) {
 
 	$scope.toggleResume = function() {
-		$rootScope.resume = !$rootScope.resume;
+
+		if (project.showing) {
+			project.close();
+		} else {
+			$rootScope.resume = !$rootScope.resume;
+		}
 	}
 
 	$scope.open = function(projectName) {

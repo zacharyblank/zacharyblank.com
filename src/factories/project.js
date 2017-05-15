@@ -5,15 +5,15 @@ module.exports = function(modal) {
 			$scope.template = '/html/projects/' + projectName + '.html';
 
 			$timeout(function() {
-				$scope.show = true;
+				$scope.show = project.showing = true;
 			}, 100);
 
 			$scope.$on('$destroy', function() {
 				$state.go('home');
 			})
 
-			$scope.close = function() {
-				$scope.show = false;
+			$scope.close = project.close = function() {
+				$scope.show = project.showing = false;
 
 				$timeout(function() {
 					project.resolve();
