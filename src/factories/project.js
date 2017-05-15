@@ -13,6 +13,8 @@ module.exports = function(modal) {
 			})
 
 			$scope.close = project.close = function() {
+				$state.go('home');
+				
 				$scope.show = project.showing = false;
 
 				$timeout(function() {
