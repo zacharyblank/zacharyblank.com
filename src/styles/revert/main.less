@@ -2736,7 +2736,7 @@ Section
 }
 
 .section-resume {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   width: 75%;
@@ -2744,7 +2744,6 @@ Section
   margin-left: 25%;
   color: #333;
   // background-color: #fff;
-  // overflow: scroll;
   z-index: 2;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
@@ -2754,6 +2753,8 @@ Section
 
   
   > .container-fluid {
+    overflow: scroll;
+    height: 100vh;
     background-color: #fff;
   }
 }
