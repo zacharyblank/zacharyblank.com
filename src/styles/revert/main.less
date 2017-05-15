@@ -2740,17 +2740,22 @@ Section
   top: 0;
   right: 0;
   width: 75%;
-  height: 100vh;
+  min-height: 100vh;
   margin-left: 25%;
   color: #333;
-  background-color: #fff;
-  overflow: scroll;
+  // background-color: #fff;
+  // overflow: scroll;
   z-index: 2;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   -webkit-transform: translateX(100%);
       -ms-transform: translateX(100%);
           transform: translateX(100%);
+
+  
+  > .container-fluid {
+    background-color: #fff;
+  }
 }
 
 .menu-open .section-resume {
