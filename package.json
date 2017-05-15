@@ -1,0 +1,40 @@
+{
+  "name": "zacharyblank.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "./node_modules/.bin/gulp dev",
+    "build": "./node_modules/.bin/gulp build"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.5.6",
+    "express": "^4.15.2",
+    "prerender-node": "^2.7.0"
+  },
+  "devDependencies": {
+    "@uirouter/angularjs": "^1.0.3",
+    "angular": "^1.6.4",
+    "angular-modal": "^0.5.0",
+    "bootstrap": "^3.3.7",
+    "browser-sync": "^2.18.8",
+    "gulp": "^3.9.1",
+    "gulp-bro": "^0.2.2",
+    "gulp-cloudfiles": "^0.1.2",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-less": "^3.3.0",
+    "gulp-nodemon": "^2.2.1",
+    "gulp-plumber": "~0.6.2",
+    "gulp-protractor": "0.0.7",
+    "gulp-sourcemaps": "^2.4.1",
+    "gulp-uglify": "^0.3.2",
+    "gulp-usemin": "~0.3.4",
+    "gulp-util": "~2.2.16",
+    "less-plugin-npm-import": "^2.1.0",
+    "run-sequence": "^1.2.2",
+    "stringify": "^5.1.0",
+    "uglifyify": "^3.0.4"
+  }
+}

@@ -1,0 +1,41 @@
+button.wave {
+    background: none;
+    border: none;
+    -webkit-appearance: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding: 0;
+    color: #fff;
+    z-index: 3;
+    width: 30px;
+    height: 22px;
+    overflow: hidden;
+    right: 30px;
+    position: absolute;
+    top: 30px;
+
+    i {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: -30px;
+        width: 60px;
+        height: 2px;
+        border-radius: 50px;
+        background-color: currentColor;
+        -webkit-transition: all 0.4s ease-out;
+        transition: all 0.4s ease-out;
+
+        &:nth-child(2) {
+            top: 10px;
+            left: auto;
+            right: -40px;
+        }
+
+        &:nth-child(3) {
+            top: 20px;
+        }        
+    }
+}

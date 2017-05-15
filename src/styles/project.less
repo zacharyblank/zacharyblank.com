@@ -1,0 +1,123 @@
+.project-modal {
+
+	&:before {
+		content: " ";
+		display: block;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		background: rgba(0, 0, 0, 0);
+		z-index: 10;
+	    -webkit-transition: all .8s cubic-bezier(0.645, .045, .095, 1);
+	          transition: all .8s cubic-bezier(0.645, .045, .095, 1);
+	}
+
+	&.in:before {
+		background: rgba(0, 0, 0, .5);
+	}
+}
+
+.project {
+	min-height: 100vh;
+	position: absolute;
+	width: 75%;
+	background: #fff;
+	top: 0;
+	left: 25%;
+	.translate3d(100%, 0, 0);
+	z-index: 10;
+	-webkit-transform-style: preserve-3d;
+      -ms-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+ 	-webkit-transition: all .8s cubic-bezier(0.645, .045, .095, 1);
+          transition: all .8s cubic-bezier(0.645, .045, .095, 1);
+    color: #3b3b3b;
+    padding-top: 100px;
+    // margin-left: 25%;
+
+    &:before {
+    	content: " ";
+    	display: block;
+    	position: fixed;
+    	top: 0;
+    	left: 0;
+    	width: 100%;
+    	height: 100%;
+    }
+
+	&.in {
+		.translate3d(0, 0, 0);
+	}
+
+	.nav-toggle {
+		overflow: visible;
+
+		i {
+			color: #3b3b3b;
+			width: 30px;
+			right: 0;
+			left: 0;
+			top: 10px;
+			transform-origin: 50%;
+
+			&:nth-child(1) {
+				.rotate(-45deg);
+			}
+
+			&:nth-child(2) {
+				.rotate(45deg);
+				left: 0;
+				// top: inherit;
+			}
+		}
+
+	}
+
+	h1 {
+		font-family: 'Montserrat',sans-serif;
+		font-weight: 700;
+		font-size: 42px;
+		margin-bottom: 40px;
+
+		i {
+			font-family: 'Playfair Display', serif;
+			font-size: 1.1em;
+		}
+	}
+
+	header {
+
+		p {
+			font-size: 16px;
+			color: #4b4b4b;
+			line-height: 2em;
+		}
+
+		section.stats {
+			margin-top: 60px;
+
+			h6 {
+			    font-family: 'Montserrat',sans-serif;
+			    font-size: 1.15em;
+			    line-height: 1.35;
+			    font-weight: 700;
+			    color: #3b3b3b;
+			    letter-spacing: 0.2em;
+			    text-transform: uppercase;
+			    margin: 1.4em 0;				
+			}
+
+			span {
+			    font-family: 'Lora',serif;
+			    font-size: 1.1em;
+			    line-height: 2;
+			    color: #4b4b4b;
+			    overflow-x: hidden;				
+			}
+		}
+	}
+
+	section.image {
+		margin-top: 60px;
+	}
+}
