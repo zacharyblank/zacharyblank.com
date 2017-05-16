@@ -7,7 +7,24 @@ var http = require('http');
 app.set('views', __dirname + '/build');
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'ejs');
-app.use(require('prerender-node').set('prerenderServiceUrl', 'http://localhost:3000').set('protocol', 'https'));
+app.use(require('prerender-node').set('prerenderToken', 'RJZClZGPGRBMTKwmCuq7').set('crawlerUserAgents', [
+  'googlebot',
+  'baiduspider',
+  //'facebookexternalhit',
+  'twitterbot',
+  'rogerbot',
+  'linkedinbot',
+  'embedly',
+  'quora link preview',
+  'showyoubot',
+  'outbrain',
+  'pinterest',
+  'developers.google.com/+/web/snippet',
+  'slackbot',
+  'vkShare',
+  'W3C_Validator',
+  'redditbot'
+]));
 
 app.use(express.static(__dirname + '/build', { maxAge: 86400000 }));
 
