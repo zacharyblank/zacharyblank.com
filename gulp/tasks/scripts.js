@@ -3,7 +3,16 @@ module.exports = function(config) {
 
 	var gulp = require('gulp'),
     	bro = require('gulp-bro'),
+    	uglify = require('gulp-uglify'),
+		runSequence = require('run-sequence'),
+		plumber = require('gulp-plumber'),
+		ngAnnotate = require('gulp-ng-annotate'),
+		bytediff = require('gulp-bytediff'),
 	    stringify = require('stringify');
+
+	gulp.task('build-scripts', function(callback) {
+		runSequence('scripts', 'minify-scripts', callback);
+	});
 
     gulp.task('watch-scripts', ['scripts'], function(done) {
     	process.browserSync.reload();
@@ -11,7 +20,6 @@ module.exports = function(config) {
     })
 
 	gulp.task('scripts', function() {
-
 		var transforms = [
             ['stringify', {
             	global: true,
@@ -26,6 +34,16 @@ module.exports = function(config) {
 	            debug: true
 	        }))
 	        .pipe(gulp.dest(config.build))
+	});
+
+	gulp.task('minify-scripts', function() {
+	    gulp.src(config.build + '/index.js')
+	    	// .pipe(ngAnnotate({add: true}))
+	    	.pipe(bytediff.start())
+				.pipe(uglify({mangle: false}))
+			.pipe(bytediff.stop())
+			.pipe(plumber.stop())
+			.pipe(gulp.dest(config.build));
 	});
 
 }
