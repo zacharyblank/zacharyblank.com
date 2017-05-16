@@ -24,6 +24,7 @@
     "gulp": "^3.9.1",
     "gulp-bro": "^0.2.2",
     "gulp-bytediff": "^1.0.0",
+    "gulp-clean-css": "^3.3.1",
     "gulp-cloudfiles": "^0.1.2",
     "gulp-htmlmin": "^3.0.0",
     "gulp-less": "^3.3.0",

@@ -38,7 +38,7 @@ module.exports = function(config) {
 
 	gulp.task('minify-scripts', function() {
 	    gulp.src(config.build + '/index.js')
-	    	// .pipe(ngAnnotate({add: true}))
+	    	.pipe(plumber())
 	    	.pipe(bytediff.start())
 				.pipe(uglify({mangle: false}))
 			.pipe(bytediff.stop())
