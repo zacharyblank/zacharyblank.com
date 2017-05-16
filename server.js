@@ -1,12 +1,14 @@
 'use strict';
 
 var express = require('express');
+var compression = require('compression');
 var app = module.exports = express();
 var http = require('http');
 
 app.set('views', __dirname + '/build');
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'ejs');
+app.use(compression());
 app.use(require('prerender-node').set('prerenderToken', 'RJZClZGPGRBMTKwmCuq7').set('crawlerUserAgents', [
   'googlebot',
   'baiduspider',
