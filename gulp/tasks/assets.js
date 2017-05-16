@@ -4,7 +4,9 @@ module.exports = function(config) {
 
 	gulp.task('assets', function() {
 		gulp.src(config.assets.src)
-			.pipe(imagemin())
+			.pipe(imagemin([
+				imagemin.jpegtran({progressive: true}),
+			]))
 	        .pipe(gulp.dest(config.build + '/assets'));
 	});
 }
