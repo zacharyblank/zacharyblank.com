@@ -10,6 +10,8 @@ angular.module('ZB', [
 ])
 
 .config(require('./routes'))
+.config(require('./config'))
+.run(require('./run'))
 
 .controller('Home', require('./controllers/home'))
 
