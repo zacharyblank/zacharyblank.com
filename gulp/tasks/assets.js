@@ -1,8 +1,10 @@
 module.exports = function(config) {
-	var gulp = require('gulp');
+	var gulp = require('gulp'),
+		imagemin = require('gulp-imagemin');
 
 	gulp.task('assets', function() {
 		gulp.src(config.assets.src)
+			.pipe(imagemin())
 	        .pipe(gulp.dest(config.build + '/assets'));
 	});
 }
