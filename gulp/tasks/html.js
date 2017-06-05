@@ -10,7 +10,7 @@ module.exports = function(config) {
 	        .pipe(htmlmin({
 	        	ignoreCustomFragments: [ /\{\{[\s\S]*?\}\}/ ],
 	            removeComments: true,
-	            collapseInlineTagWhitespace: true,
+	            collapseInlineTagWhitespace: false,
 	            collapseWhitespace: true
 	            // spare: true,
 	            // empty: true,
